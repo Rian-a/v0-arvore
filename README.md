@@ -1,35 +1,207 @@
-# v0-arvore
+# Rick and Morty - Árvore Interativa
 
-This is a [Next.js](https://nextjs.org) project bootstrapped with [v0](https://v0.app).
+Projeto acadêmico desenvolvido para a disciplina de Estrutura de Dados.
 
-## Built with v0
+A aplicação consome a API pública Rick and Morty e organiza os dados em uma árvore genérica interativa, permitindo visualizar e manipular algoritmos clássicos de árvores em tempo real.
 
-This repository is linked to a [v0](https://v0.app) project. You can continue developing by visiting the link below -- start new chats to make changes, and v0 will push commits directly to this repo. Every merge to `main` will automatically deploy.
+---
 
-[Continue working on v0 →](https://v0.app/chat/projects/prj_RzDqccYPcr0ci2SdNs2aGhP2oKGW)
+# Objetivo
 
-## Getting Started
+Demonstrar o funcionamento de estruturas de dados do tipo árvore utilizando dados reais obtidos de uma API pública.
 
-First, run the development server:
+O sistema permite:
+
+- Visualizar uma árvore hierárquica
+- Executar caminhamentos
+- Realizar buscas em profundidade (DFS)
+- Inserir nós localmente
+- Remover nós e subárvores
+- Calcular altura da árvore
+- Calcular grau dos nós
+
+---
+
+# Estrutura da Árvore
+
+A hierarquia utilizada foi:
+
+```text
+Locations
+ ├── Earth
+ │    ├── Rick Sanchez
+ │    ├── Morty Smith
+ │    └── Summer Smith
+ │
+ ├── Citadel of Ricks
+ │    ├── Evil Morty
+ │    └── Rick Prime
+```
+
+- Raiz: `Locations`
+- Filhos: `Locations`
+- Sub-filhos: `Residents`
+
+---
+
+# Tecnologias Utilizadas
+
+- React
+- JavaScript
+- TailwindCSS
+- Rick and Morty API
+
+API utilizada:
+
+https://rickandmortyapi.com/
+
+---
+
+# Funcionalidades
+
+## Visualização da Árvore
+
+- Renderização hierárquica
+- Nós clicáveis
+- Expansão e recolhimento de nós
+- Destaque visual para seleção e busca
+
+---
+
+## Caminhamentos
+
+Implementação dos algoritmos:
+
+- Pré-ordem
+- Em-ordem (adaptado para árvore genérica)
+- Pós-ordem
+
+Os resultados são exibidos diretamente na interface.
+
+---
+
+## Busca em Profundidade (DFS)
+
+Busca utilizando o algoritmo DFS (Depth First Search).
+
+Funcionalidades:
+- Busca por nome
+- Destaque do nó encontrado
+- Exibição do caminho completo
+
+Exemplo:
+
+```text
+Locations → Earth → Rick Sanchez
+```
+
+---
+
+## Inserção Local
+
+Permite adicionar novos nós manualmente:
+
+- Nome do novo nó
+- Seleção do nó pai
+
+A árvore é atualizada em tempo real.
+
+---
+
+## Remoção Local
+
+Permite remover:
+- Um nó específico
+- Toda sua subárvore
+
+A estrutura é reorganizada automaticamente.
+
+---
+
+## Métricas
+
+Exibição em tempo real de:
+
+- Altura da árvore
+- Grau dos nós
+
+Definições:
+- Altura: maior caminho entre raiz e folha
+- Grau: quantidade de filhos de um nó
+
+---
+
+# Estrutura do Projeto
+
+```text
+src/
+├── components/
+├── services/
+├── utils/
+├── App.jsx
+```
+
+## components/
+
+Responsável pela interface visual da aplicação.
+
+## services/
+
+Responsável pelas chamadas da API.
+
+## utils/
+
+Implementação manual dos algoritmos e operações da árvore.
+
+---
+
+# Conceitos Aplicados
+
+- Árvores genéricas
+- Estruturas hierárquicas
+- Recursão
+- DFS (Depth First Search)
+- Caminhamentos em árvore
+- Inserção e remoção de nós
+- Manipulação dinâmica em memória
+
+---
+
+# Como Executar
+
+Clone o repositório:
+
+```bash
+git clone <url-do-repositorio>
+```
+
+Entre na pasta do projeto:
+
+```bash
+cd nome-do-projeto
+```
+
+Instale as dependências:
+
+```bash
+npm install
+```
+
+Execute o projeto:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+# Observação
 
-## Learn More
+Este projeto foi desenvolvido exclusivamente para fins educativos e acadêmicos, com foco no aprendizado de Estruturas de Dados e manipulação de árvores em memória.
 
-To learn more, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-- [v0 Documentation](https://v0.app/docs) - learn about v0 and how to use it.
+# Autor
 
-<a href="https://v0.app/chat/api/kiro/clone/Rian-a/v0-arvore" alt="Open in Kiro"><img src="https://pdgvvgmkdvyeydso.public.blob.vercel-storage.com/open%20in%20kiro.svg?sanitize=true" /></a>
+Rian Simão Gomes  
+Estudante de Análise e Desenvolvimento de Sistemas
